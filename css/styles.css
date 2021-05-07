@@ -1,0 +1,238 @@
+/* ----------------------------------------------
+    General
+---------------------------------------------- */
+
+@import url(https://use.fontawesome.com/releases/v5.15.3/css/all.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    font-size: 10px;
+    --colorNaranja: #F0A83E;
+    --colorMarron: #3C2313;
+    --colorGris: #666666;
+}
+
+/* ----------------------------------------------
+    Header
+---------------------------------------------- */
+
+header div.primeraParte {
+    color: white;
+    font-size: 1rem;
+    background-color: black;
+    height: 25px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.primeraParte div {
+    display: flex;
+}
+
+header div.primeraParte div p{
+    margin-left: .9rem;
+}
+
+header div.primeraParte div p::after{
+    color: white;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content:"\f078";
+    margin-left: .25rem;
+}
+
+header div.segundaParte{
+    color: white;
+    font-weight: 700;
+    background-color: var(--colorNaranja);
+    height: 60px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header div.segundaParte h2{
+    font-size: 2rem;
+}
+
+header div.segundaParte h2 span{
+    color: black
+}
+
+
+header div.segundaParte nav ul{
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.segundaParte ul li {
+    list-style: none;
+    margin-right: 3.1rem;
+    transition: all .5s ease-in-out;
+}
+
+header div.segundaParte nav ul li:hover {
+    font-size: 1.5rem;
+}
+
+header div.segundaParte ul li::before {
+    color: white;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content:"\f1b0";
+    margin-right: .25rem;
+}
+
+
+header div.segundaParte ul li a, header div.segundaParte ul li a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+header div.segundaParte div a {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+/* ----------------------------------------------
+Main
+---------------------------------------------- */
+
+main {
+    min-height: calc(100vh - 110px);
+}
+
+main section {
+    text-align: center;
+    padding: 6rem 9.5rem;
+}
+
+main section h1 {
+    color: var(--colorMarron);
+    font-size: 4rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+main section nav ul {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3.6rem;
+}
+
+main section nav ul li {
+    list-style: none;
+    padding-right: 3rem;
+}
+
+main section nav ul li:nth-child(1)::after {
+    color: var(--colorGris);
+    font-size: 1.5rem;
+    content:"-";
+    margin-left: 2.5rem;
+}
+
+main section nav ul li:nth-child(2)::after {
+    color: var(--colorGris);
+    font-size: 1.5rem;
+    content:"-";
+    margin-left: 2.5rem;
+}
+
+main section nav ul li a, main section nav ul li a:visited{
+    font-size: 1.5rem;
+    color: var(--colorGris);
+    text-decoration: none;
+}
+
+main section div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section article {
+    transition: all .5s ease-in-out;
+}
+main section article:hover {
+    transform: scale(1.2)
+}
+
+main section div article h3{
+    color: var(--colorMarron);
+    font-size: 1.5rem;
+}
+
+main section div article h3{
+    color: var(--colorMarron);
+    font-size: 1.5rem;
+}
+
+main section div article p{
+    color: var(--colorNaranja);
+    font-size: 2.2rem;
+    padding-bottom: 3rem;
+}
+
+
+
+/* ----------------------------------------------
+    Footer
+---------------------------------------------- */
+
+footer {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    height: 25px;
+    background-color: black;
+    padding-top: calc((25px - 1.2rem)/2);
+}
+
+
+
+/* ----------------------------------------------
+    Responsive
+---------------------------------------------- */
+
+@media (max-width: 600px){
+    :root {
+        font-size: 9px;
+    }
+
+    header div.segundaParte nav {
+        display: none;
+    }
+
+    header div.segundaParte div a {
+        font-size: 0px;
+    }
+
+    header div.segundaParte div::after{
+        color: white;
+        font-family: "Font Awesome 5 Free";
+        font-size: 2rem;
+        font-weight: 900;
+        content:"\f0c9";
+        margin-left: .25rem;
+    }
+
+    main section div {
+        flex-direction: column;
+    }
+}
